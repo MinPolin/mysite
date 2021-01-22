@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <title>navbar</title>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" href="http://127.0.0.1:8000/home">Your Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="http://127.0.0.1:8000/prods">Товары <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Контакты <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">О нас <span class="sr-only">(current)</span></a>
+            </li>
+
+        </ul>
+        <div class="ml-auto row menu_icons">
+            <!-- <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+
+
+            <form class="form form-inline">
+                <input type="text" class="input" placeholder="Поиск">
+                <button class="search">
+                    <svg class="svg--lupe" width="25" height="25" viewBox="0 0 20 20">
+                        <g transform="translate(1 1)" stroke="#272727" stroke-width="2" fill="none" fill-rule="evenodd"
+                           stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11.455 11.455L18 18"></path>
+                            <circle cx="6.545" cy="6.545" r="6.545"></circle>
+                        </g>
+                    </svg>
+                </button>
+            </form>
+
+            <div class="cart ">
+                <a href="http://127.0.0.1:8000/cart/">
+                    <svg class="svg--cart scart " viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="#272727" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24.11 29.835H1l.963-21.247H23.15z" fill="none" stroke-width="2"></path>
+                            <path d="M8 12.382v-6.64C8 3.124 10.263 1 13.056 1c2.791 0 5.055 2.123 5.055 4.743v6.64"
+                                  fill="none" stroke-width="2"></path>
+                        </g>
+                    </svg>
+                    <div class="amount"></div>
+                </a>
+
+            </div>
+
+            <div class="person ">
+
+                <a href="{% url 'login'%}">
+                    {% if not user.is_authenticated %}
+                    <img width="30" height="30" alt=""
+                         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMTAxODIwO308L3N0eWxlPjwvZGVmcz48dGl0bGUvPjxnIGRhdGEtbmFtZT0iTGF5ZXIgMTkiIGlkPSJMYXllcl8xOSI+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTYsMTdhOCw4LDAsMSwxLDgtOEE4LDgsMCwwLDEsMTYsMTdaTTE2LDNhNiw2LDAsMSwwLDYsNkE2LDYsMCwwLDAsMTYsM1oiLz48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0yMywzMUg5YTUsNSwwLDAsMS01LTVWMjJhMSwxLDAsMCwxLC40OS0uODZsNS0zYTEsMSwwLDAsMSwxLDEuNzJMNiwyMi41N1YyNmEzLDMsMCwwLDAsMywzSDIzYTMsMywwLDAsMCwzLTNWMjIuNTdsLTQuNTEtMi43MWExLDEsMCwxLDEsMS0xLjcybDUsM0ExLDEsMCwwLDEsMjgsMjJ2NEE1LDUsMCwwLDEsMjMsMzFaIi8+PC9nPjwvc3ZnPg=="/>
+                    {% else%}
+                        <div class="us_name_crcl"><div class="us_name">{{user.username}}</div></div>
+<!--                        <div class="us_name_crcl"><div class="us_name">{{user_letter}}</div></div>-->
+                    {%endif %}
+                </a>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+.items{
+	/*border: 1px solid black;*/
+	height: 450px;
+	position: relative;
+	
+
+
+}
+.image{
+	height:250px;
+	width: 95%;
+	justify-content: center;
+	
+	margin-left: 2.5%;
+}
+.image img{
+	max-width: 100%;
+	max-height: 100%;
+	/*object-fit: cover;
+    width: 250px;
+    height: 250px;
+*/
+}
+.items .but{
+	position: absolute;
+
+	width: 100%;
+	bottom: 20px;
+	/*border: 1px solid black;*/
+	justify-content: center;
+
+
+}
+.container{
+	padding-top: 10px;
+}
+#filter{
+	padding-bottom: 10px;
+
+}
+select{
+	margin-right: 15px;
+	height: 35px;
+	width: 85px;
+}
+.filt_names{
+	padding-left: 15px;
+	padding-top: 5px;
+
+}
+.fn{
+	width: 89px;
+	margin-right: 15px;
+}
+#filt_container{
+	
+	/*background-color: #e4e5e9;*/
+	margin-bottom: 5px;
+	border-bottom: 0.5px solid grey;
+}
+#filter_btn{
+	margin-left: 20px;
+	
+}

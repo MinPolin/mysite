@@ -1,0 +1,111 @@
+.images{
+	position: relative;
+	overflow:hidden;
+	width: 100%;
+	height: 400px;
+	justify-content: center;
+	
+	
+}
+.images img{
+	position: absolute;
+	top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+	width: 300px;
+	height: 400px;
+	object-fit:cover;
+	/*object-fit: cover;
+    width: 250px;
+    height: 250px;
+*/
+}
+.info div{
+	
+}
+.info{
+	margin-top: 20px;
+}
+.headers{
+	margin-left: -10px;
+	border: 2px solid white;
+	
+	display: inline-block;
+}
+
+.colors{
+	/*height: 60px;*/
+	width: 100%;
+
+} 
+.color_item{
+	width: 72px;
+	height: 72px;
+	/*border: 1px solid black;*/
+	position: relative;
+	overflow:hidden;
+	margin:2px 6px 6px 6px;
+	cursor: pointer;
+
+
+}
+.color_item img{
+	position: absolute;
+	top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+	width: 90px;
+	height: 90px;
+	object-fit:cover;
+
+}
+.click_border{
+	border: 2px solid orange;
+
+}
+.sizes{
+	margin-top: 20px;
+	opacity:0.4;
+}
+#opac{
+	opacity:0.4;
+}
+.size_item{
+	width: 30px;
+	height: 30px;
+	margin:2px 6px 6px 6px;
+	padding-top: 1px;
+	text-align: center;
+	border-radius: 100px;
+	background-color: #fadbc0;
+	cursor: default;
+
+
+}
+.error{
+	border-bottom:  2px solid red;
+	
+	
+
+
+}
+#error{
+	margin-left: -10px;
+}
+
+#amountform{
+	margin-top: 20px;
+	margin-left: -10px;
+}
+
+.description{
+	margin-top: 10px;
+}
+.formby{
+	display: inline-block;
+}
+.formby2{
+	display: none;
+}
+
+/*когда жмякаешь на цвет появляются доступные размеры и меняется картинка возможно цвет-картинка тогда надо к каждому цвету добавлять по картинке*/

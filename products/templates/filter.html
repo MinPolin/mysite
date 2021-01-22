@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter</title>
+	{% load static %}
+</head>
+<body>
+	<div class="container" id = filt_container>
+		<div class="filt_names row">
+			<div class="fn">Цвет</div>
+			<div class="fn">Размер</div>
+			<div class="fn">Категория</div>
+		</div>
+		<div class="row" id ="filter" >
+			
+			<div class="col-lg-9">
+				
+				<form action=" {% url 'filter' %}" method="post" id = filter_form>
+					{% csrf_token %}
+				{% for type in my_filter %}
+					
+				   <select size="1">
+				   	    <option value=""></option>
+				   		
+				   		{% for item in type%}
+					    
+					   		 <option value={{item.name}}>{{item.name}}</option>
+				   		{% endfor %}
+				   </select>
+				{% endfor %}   
+				</form>
+			</div>
+			<button class="btn btn-outline-danger " type="submit"  id ="drop_btn">Сбросить</button>
+			<button class="btn btn-success" type="submit"  id ="filter_btn">Применить</button>
+		</div>
+	</div>
+	<script type="text/javascript" src='{% static "js/filter.js"%}'></script>
+</body>
+</html>

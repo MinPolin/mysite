@@ -1,0 +1,77 @@
+.ord_img{
+	margin-top: 20px;
+	position: relative;
+	overflow:hidden;
+	width: 70px;
+	height: 70px;
+	justify-content: center;
+	
+	
+}
+.ord_img img{
+	position: absolute;
+	top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+	width: 80px;
+	height: 112px;
+	object-fit:cover;
+	/*object-fit: cover;
+    width: 250px;
+    height: 250px;
+*/
+}
+
+.scroll-block {
+	margin-top: 30px;
+	height: 300px;
+	overflow-y: scroll;
+}
+.scroll-block::-webkit-scrollbar-track {
+	border-radius: 4px;
+}
+.scroll-block::-webkit-scrollbar {
+	width: 6px;
+}
+.scroll-block::-webkit-scrollbar-thumb {
+	border-radius: 4px;
+	background: #f0f2f5;
+	padding-top: 4px; 
+}
+.scroll-block:hover::-webkit-scrollbar-thumb {
+	background: #6a7d9b;}
+
+.forms{
+	margin-top: 30px;
+}
+
+#inphone{
+	margin-right: 1px;
+
+
+}
+.red_star{
+	color: red;
+	content: " *";
+}
+.req .row{
+	width: 100px;
+	margin-left: 1px;
+}
+.form_btn{
+	margin-left: 1px;
+}
+.form_btn button{
+	height: 40px;
+
+}
+
+.at_inner{
+	color: red;
+	margin-left: 30px;
+}
+
+.price{
+	position: absolute;
+	right: 0;
+}

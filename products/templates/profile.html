@@ -1,0 +1,64 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content%}
+		<link rel="stylesheet" href='{% static "profile/style.css" %}' type="text/css">
+		<div class="container">
+			
+			<div class="row info">
+				<div class="col-lg-4 images">
+					<img src="{{product.fimage.url}}" alt="gg">
+				</div>
+				<div class="col-lg-4 variable">
+					<div class="headers">Цвета:</div>
+					<div class="colors row " data-prodid="{{pr_id}}">
+						
+						{% for item in prod_colors %}
+
+							{% for im in item.img.all%}
+								{% if im.prods == product and im.main%}
+									
+									<div class="color_item" id="color{{item.id}}" onclick="ShowSize(this,'{{prod_sizes}}')" data-name="{{item.name}}" data-color_id="{{item.id}}"  data-img="{{im.image.url}}">
+										<img src="{{im.image.url}}" >
+									</div>
+								{% endif %}
+							{% endfor %}
+
+						{% endfor%}
+					</div>
+					<div class="headers">Размеры:</div>
+					<div class="sizes  row" id="opac">
+						{% for size in sizes%}
+							<div class="size_item">{{size.name}}</div>
+						{% endfor %}
+
+					</div>
+					
+					<div class="empty"></div>
+					
+				</div>
+				<div class="col-lg-4 toBuy">
+					<h2>{{product.name}}</h2>
+					<h4>₽ {{product.price}}</h4>
+					<div class="description">
+						
+						<p>{{product.description}}</p>
+					</div>
+
+					<div class="formby" id="formby">
+						<div class="btn btn-success" onclick="AddToCart()">
+							Купить 
+						</div>
+					</div>
+					<div class="formby2" id="formby2">
+						<a   href="http://127.0.0.1:8000/cart/"   class="btn btn-success" >
+							Корзина
+						</a>
+					</div>
+					
+				</div>
+
+			</div> 
+			
+		</div>
+		
+{%endblock content%}

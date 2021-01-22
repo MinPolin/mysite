@@ -1,0 +1,106 @@
+.sl1{
+	background-image: url(sl11.jpg);
+	width: 100%;
+	background-repeat: no-repeat;
+	
+	
+}
+.sl2{
+	background-image: url(sl22.jpg);
+	width:100%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+}
+.sl3{
+	background-image: url(sl33.jpg);
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	
+}
+.in_sl{
+	width: 100%;
+	height: 500px;
+	margin-left: 15px;
+
+}
+
+.pixoff-slider-navigation-anchor{
+	height: 100%;
+}
+.myP , .myN{
+	height: 100%;
+	width: 70px;
+	background-color: transparent;
+	padding-top: 240px;
+
+}
+.myP{
+	padding-left: 20px;
+}
+
+.myN{
+	margin-left: 89%;
+	padding-left: 15px;
+	
+}
+
+
+.in_sl:hover .myP{
+	background: linear-gradient(to right, rgba(250,250,250, 0.9), rgba(250,250,250, 0));
+}
+.in_sl:hover .myN{
+	background: linear-gradient(to left, rgba(250,250,250, 0.9), rgba(250,250,250, 0));
+}
+.in_sl:hover .fa-chevron-left,.in_sl:hover .fa-chevron-right{
+	color:rgba(250,250,250, 0.85);
+	text-shadow: 0px 0px 6px grey;
+}
+
+
+.fa-chevron-left,.fa-chevron-right{
+	font-size:48px;
+	
+	color:rgba(250,250,250, 0.7);
+}
+.categories{
+	/*border: 1px solid black;*/
+	justify-content: center;
+}
+.category_item{
+	
+	/*border: 1px solid black;*/
+	
+	margin: 30px 20px 0 20px;
+}
+.category_item a{
+
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	color: black;
+
+}
+a:hover{
+
+	text-decoration: none;
+	color: black;
+
+}
+
+
+
+.in_category_item{
+	height: 300px;
+	
+	width: 100%;
+	padding-top: 140px;
+	
+}
+.name{
+	text-align: center;
+	width: 100%;
+	background-color: #93c4c4;
+
+}

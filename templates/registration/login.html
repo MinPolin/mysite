@@ -1,0 +1,52 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content%}
+<div class="container">
+    <div class="content" style="padding-top: 20px">
+        {% if not user.is_authenticated %}
+        {% if form.errors %}
+            <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+        {% if next %}
+            {% if user.is_authenticated %}
+                <p>Your account doesn't have access to this page. To proceed,
+                please login with an account that has access.</p>
+            {% else %}
+                <p>Please login to see this page.</p>
+            {% endif %}
+        {% endif %}
+        <form method="post" action="{% url 'login' %}?next={{request.path}}">{% csrf_token %}
+        <div class="forms" style="display: block">
+            <label style="display: block" class="col-lg-4 control-label req" id='insecname'>
+                <div class="row" style="padding-left: 15px">Логин
+                    <div class="red_star"> *</div>
+                </div>
+                <div class=""><input class="form-control" type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username"></div>
+            </label>
+
+            <label style="display: block" class="col-lg-4 control-label req" id='inname'>
+                <div class="row" style="padding-left: 15px">Пароль
+                    <div class="red_star"> *</div>
+                </div>
+                <div class=""><input class="form-control" type="password" name="password" autocomplete="current-password" required="" id="id_password"></div>
+            </label>
+        </div>
+        <div class="col-lg-5 ">
+            <input type="submit" value="login" class="btn btn-outline-success" />
+            <input type="hidden" name="next" value="{{ next }}" />
+        </div>
+
+        </form>
+
+
+        {% else %}
+        <div>{{user.username}}
+           <a href="{% url 'logout'%}?next={{request.path}}">Выйти</a>
+
+        </div>
+        {%endif %}
+    </div>
+
+</div>
+
+{% endblock content%}

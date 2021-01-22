@@ -1,0 +1,98 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content%}
+	<link rel="stylesheet" href='{% static "home/style.css" %}' type="text/css">
+	<div class="slider-item">
+	    <div class="sl1">
+	    	<div class="in_sl">
+	    		<div class="pixoff-slider-navigation-anchor row">
+	    			<div class="myP prev-arrow">
+    					<i class='fas fa-chevron-left'></i>
+	    				
+	    			</div>
+				    <div class="myN next-arrow ">
+				    	<i class='fas fa-chevron-right'></i>
+				    </div>
+				    
+				</div>
+
+	    	</div>
+	    </div>
+	    <div class="sl2">
+	    	<div class="in_sl">
+	    		<div class="pixoff-slider-navigation-anchor row">
+	    			<div class="myP prev-arrow">
+	    				
+    					<i class='fas fa-chevron-left'></i>
+	    				
+	    			</div>
+				    <div class="myN next-arrow ">
+				    	<i class='fas fa-chevron-right'></i>
+				    </div>
+				</div>
+		    </div>
+		</div>
+	    <div class="sl3">
+	    	<div class="in_sl">
+	    		<div class="pixoff-slider-navigation-anchor row">
+	    			<div class="myP prev-arrow">
+	    				
+    					<i class='fas fa-chevron-left'></i>
+	    				
+	    			</div>
+				    <div class="myN next-arrow ">
+				    	<i class='fas fa-chevron-right'></i>
+				    </div>
+				</div>
+	    		
+	    	</div>
+	    </div>	    
+	</div>
+	<div class="container"> 
+		<div class="row categories">
+				{% for cat in cats %}
+
+					<div class="category_item col-lg-5">
+						<a href="http://127.0.0.1:8000/prods/category/{{cat.id}}">
+							<div class="in_category_item" id = "cat_{{cat.id}}" style="background: url({{cat.fimage.url}})">
+								<div class="name">
+									 {{cat.name}}
+								</div> 
+							</div>
+						</a>
+					</div>
+
+				{% endfor %}
+
+			
+		</div> 
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		    $('.slider-item').slick({
+		    	arrows: true,
+		    	
+		    	dots:true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 5000,
+				prevArrow: $('.prev-arrow'),
+        		nextArrow: $('.next-arrow'),
+
+			});
+			console.log('yepyep');
+
+		});
+		var slider = $('.slider-item');
+
+		$('.pixoff-slider-navigation-anchor .slick-prev').on('click', function() {
+		  $(slider).slick('slickPrev');
+		});
+		$('.pixoff-slider-navigation-anchor .slick-next').on('click', function() {
+		  $(slider).slick('slickNext');
+		});
+
+
+	</script>
+{%endblock content%}

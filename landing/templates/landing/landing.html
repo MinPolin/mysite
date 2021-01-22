@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	{% load static %}
+	<link rel="stylesheet" href='{% static "css/bootstrap.min.css" %}' type="text/css">
+	<link rel="stylesheet" href='{% static "landing/style.css" %}' type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+	<title>Landing</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center topRow">
+			
+				<div class="soon col-lg-9">
+					<p class="maintxt">Наш магазин скоро отроется</p>
+				    <p class="maintxt2">Пожалуйста оставьте своё имя и email в форме ниже</p>
+
+				    <form action="" method="post">
+				    	{% csrf_token%}
+				    	<div class="row put">
+				    	<div class="col-lg-5 eanf ">
+				    		<label class="ean">Email:</label>
+				    		<input type="email" name="{{form.email.name}}" class="form-control ">
+
+				    	</div>
+					    <div class="col-lg-5 eanf">
+					    	<label class="ean">Name:</label>
+				    		<input type="text" name="{{form.name.name}}" class="form-control ">
+					    </div>
+					    <div class="col-lg-2">
+					    	<button type="submit" class=" btn btn-submit">Отправить</button>
+					    </div> 
+				    </div>
+				    </form>
+				    
+				</div>
+
+				
+			
+		</div>
+		<div class="row justify-content-center ">
+			<div class="col-lg-3 li"><a href={{a}}>Мы уже открылись</a></div>
+
+			
+			
+		</div>
+	</div>
+	
+</body>
+</html>

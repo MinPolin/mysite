@@ -1,0 +1,115 @@
+.menu_icons{
+	height: 40px;
+}
+a:hover{
+
+	text-decoration: none;
+	color: black;
+
+}
+
+.menu_icons .far{
+	color: black;
+	
+	font-size: 26px;
+}
+.search{
+	background-color: transparent;
+	border: 0px;
+}
+.search:active{
+
+}
+* {
+outline: 0 !important;
+}
+
+.form{
+	margin-right: 30px;
+}
+.cart{
+	margin-top: 5px;
+	height: 40px;
+	width: 40px;
+	margin-right: 20px;
+	
+	/*border: 1px solid black;*/
+
+}
+.person{
+	width: 40px;
+	height: 40px;
+	margin-right: 15px;
+	padding-top: 7px;
+
+}
+
+.cart a{
+	position: relative;
+	color: black;
+
+}
+.amount{
+	position: absolute;
+	
+	margin-left: -25px;
+	display: inline-block;
+}
+.amount_nmb{
+	
+	font-size: 15px;
+	height:  23px;
+	padding-left:  6px;
+	padding-right: 6px;
+	padding-bottom: 21px;
+	border: 1.5px solid black;
+	border-radius: 16px;
+	
+	background-color:  #FFDC73 ;
+	
+}
+
+.input{
+	
+	height: 90%;
+	border: 0px;
+	padding: 0px;
+	border-bottom: 1px solid black;
+	background-color: transparent;
+	margin-right:  10px;
+
+}	
+nav{
+	background-color: #FFDC73;
+}
+.us_name{
+	display:block;
+	font-size: 0;
+    visibility:hidden;
+	margin-top: -7px;
+	margin-left: 10px;
+
+
+}
+@font-face {
+    font-family: Natural Mono Alt; /* Гарнитура шрифта */
+    src: url(19925.ttf); /* Путь к файлу со шрифтом */
+   }
+.us_name:first-letter{
+
+	font-family:Natural Mono Alt ;
+    visibility:visible;
+	font-size: 19pt;
+	text-transform: uppercase;
+	color: black;
+}
+.us_name_crcl{
+	margin-top: 3px;
+	width: 35px;
+	height: 35px;
+	background: rgba(255, 246, 230, 0.5);
+	border-radius: 40px;
+
+
+
+}
